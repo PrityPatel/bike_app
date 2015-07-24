@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
 
-root 'users#index'
+  root 'users#index'
 
- delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
  get '/login', to: 'sessions#new'
 
@@ -13,6 +14,6 @@ root 'users#index'
 
  resources :bicycles
 
-
+ # before_action :check_logged_in, only: [:show, :update, :destroy, :edit]
 
 end

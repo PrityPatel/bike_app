@@ -1,2 +1,7 @@
 <h1>Bicycles#edit</h1>
-<p>Find me in app/views/bicycles/edit.html.erb</p>
+<%= form_for @bicycle do |b| %>
+  Description: <%= b.text_field :description %> <br>
+  Image url: <%= b.text_field :url %> <br>
+  Price: <%= b.text_field :price %> <br>
+  <%= b.submit %>
+<% end %>

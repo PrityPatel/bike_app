@@ -1,7 +1,7 @@
-<h1>New Bikes</h1>
+<h1>Add a bike</h1>
 <%= form_for @bicycle do |b| %>
-  <%= b.text_field :description %>
-  <%= b.text_field :url %>
-  <%= b.text_field :price %>
+  Description: <%= b.text_field :description %> <br>
+  Image url: <%= b.text_field :url %> <br>
+  Price: <%= b.text_field :price %> <br>
   <%= b.submit %>
-  <%= end %>
+<% end %>
