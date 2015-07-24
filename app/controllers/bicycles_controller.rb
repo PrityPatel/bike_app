@@ -17,12 +17,13 @@ class BicyclesController < ApplicationController
 
   def edit
     @bicycle = current_user.bicycles.find_by(params[:id])
-    if @bicycle.save
+    if @bicycle.update_attributes(params[:bicycle])
       redirect_to user_path(current_user)
     else
-      render 'edit'
+      render 'new'
     end
   end
+
 
   def show
   end
